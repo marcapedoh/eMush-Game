@@ -44,35 +44,22 @@ public class Salle {
     private static List<String> espaceSt;
     public Salle(String location,List<String> espaceSt) {
         this.location=location;
-        this.espaceSt = espaceSt;
+        Salle.espaceSt = espaceSt;
     }
     public List<String> getEspaceSt() {
         return espaceSt;
     }
 
     public void setEspaceSt(List<String> espaceSt) {
-        this.espaceSt = espaceSt;
+        Salle.espaceSt = espaceSt;
     }
 
-    public static void addObjectToPack(String element){
-        espaceSt.add(element);
-    }
-    public static List<String> returnItems(){
-        return espaceSt;
-    }
+
     public static void addSalle(Salle salle){
         listSalle.add(salle);
     }
     public static List<Salle> listOfSalle(){
-        return listSalle;
+        return Salle.listSalle;
     }
-    private static void showItemsInSalle(Joueur joueur) {
-        for(String item: Salle.returnItems()){
-            for(Salle salle:Salle.listOfSalle()){
-                if(Objects.equals(joueur.getSalle().getLocation(), salle.getLocation())){
-                    System.out.println(item);
-                }
-            }
-        }
-    }
+
 }

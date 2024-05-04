@@ -24,6 +24,16 @@ public class Humain extends Joueur {
         this.numberSpore = numberSpore;
     }
 
+    @Override
+    public String toString() {
+        return "Humain{" +
+                "isInfected=" + isInfected +
+                ", isSleeping=" + isSleeping +
+                ", numberSpore=" + numberSpore +
+                ", isSatiete=" + isSatiete +
+                ", nom= "+ this.getPlayerName()+
+                '}';
+    }
 
     private void updateStageOfHumain(Humain humain){
         humain.isInfected=humain!=null?true:false;

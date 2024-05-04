@@ -8,7 +8,14 @@ public class Mush extends Joueur{
     public Mush() {
     }
 
-    public Mush(String nom,Salle salle) {
+    @Override
+    public String toString() {
+        return "Mush{" +
+                "nom= "+ this.getPlayerName()+
+                "}";
+    }
+
+    public Mush(String nom, Salle salle) {
         super(nom,salle);
     }
 
